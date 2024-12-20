@@ -1,0 +1,29 @@
+// Dan's collection of doubles class
+// Mikhail Nesterenko
+// 4/13/2023
+
+
+#ifndef COLLECTION_HPP_
+#define COLLECTION_HPP_
+
+class Collection{
+public:
+  Collection(); // void constructor
+  int size() const {return size_;} // returns the size of the array
+
+  int check(double); // returns index of element containg "number" or -1 if none
+  void addNumber(double);    // adds number to the collection
+  void removeNumber(double); // deletes the number from the collection
+  void output() const;  // prints the values of the collection
+   
+  // big three
+  Collection(const Collection&); // copy constructor
+  const Collection& operator = (const Collection& rhs); // overloaded assignment
+  ~Collection(); // destructor
+
+private:
+  double *col_; // pointer to the dynamically allocated array holding collection of doubles
+  int size_;   // array size
+};
+
+#endif /* COLLECTION_HPP_ */
