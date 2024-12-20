@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "figures.hpp"
+#include "figuresInput.cpp"
 
 using namespace std;
 
